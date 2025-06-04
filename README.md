@@ -33,7 +33,7 @@ python hyperband_train.py
 
 Before running inference, **download the best model checkpoint** from this link and place it in your project root as `bart-cnn-best-so-far/`:
 
-[Download Best Model from Google Drive](https://drive.google.com/drive/folders/1A2B3C4D5E6F7G8H9)
+[Download Best Model from Google Drive](https://drive.google.com/drive/folders/11MrHx88lclIVqm8qEvILH4O1WTosg7hm?usp=sharing)
 
 Then run:
 
