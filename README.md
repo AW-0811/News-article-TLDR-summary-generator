@@ -31,7 +31,11 @@ python hyperband_train.py
 
 ## Inference
 
-Use the saved model to summarize validation articles:
+Before running inference, **download the best model checkpoint** from this link and place it in your project root as `bart-cnn-best-so-far/`:
+
+[Download Best Model from Google Drive](https://drive.google.com/drive/folders/1A2B3C4D5E6F7G8H9)
+
+Then run:
 
 ```bash
 python hyperbandinfer.py
@@ -44,6 +48,12 @@ This script:
 
 ---
 
+## Sample Output
+
+See [sample_outputs.log](./sample_outputs.log) for examples of generated summaries.
+
+---
+
 ## Directory Structure
 
 ```
@@ -51,8 +61,9 @@ This script:
 ├── hyperband_train.py          # Training script with Optuna + Hyperband
 ├── hyperbandinfer.py           # Inference script
 ├── requirements.txt            # Dependencies
-├── README.md                   # You're reading it
-└── bart-cnn-best-so-far/       # Saved best model (created after training)
+├── README.md                   # README file
+├── sample_outputs.log          # Logged summaries from inference
+└── bart-cnn-best-so-far/       # (Not included; download from Google Drive)
 ```
 
 ---
@@ -60,7 +71,8 @@ This script:
 ## Notes
 
 - Trains on a subset (50K training / 5K validation) for faster hyperparameter tuning.
-- To use full dataset, modify the `select(range(...))` lines for both train and validation sets separately.
+- To use full dataset, modify the `select(range(...))` lines.
+- Best model is not included due to file size, download from the link above.
 
 ---
 
